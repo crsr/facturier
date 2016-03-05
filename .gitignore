@@ -11,3 +11,5 @@
 /vendor/
 /web/bundles/
 /nbproject/*
+.idea
+var/cache
