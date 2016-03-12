@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<table border="1">
+    {% for values in res %}
+    <tr>
+        {% for ceil in values %}
+            <td>{{ ceil }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

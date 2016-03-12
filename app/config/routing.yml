@@ -5,3 +5,7 @@ annotation_route:
 yaml_route:
     resource: "@AppBundle/Resources/config/routing.yml"
     prefix:   /
+
+yaml_route_doi_param:
+    path: /params/{p1}/{p2}
+    defaults: { _controller: AppBundle:Global:params }

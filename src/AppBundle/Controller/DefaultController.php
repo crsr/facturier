@@ -19,7 +19,7 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
-    
+
     /**
      * @Route("/raspuns/html", name="default_raspuns")
      * 
@@ -33,8 +33,8 @@ class DefaultController extends Controller
         );
         
         return $res;
-    }    
-    
+    }
+
     /**
      * @Route("/raspuns/json/{numar}")
      */
@@ -44,27 +44,27 @@ class DefaultController extends Controller
         for ($i = 1; $i <= $numar; $i++) {
             $data['numar_generat'.$i] = rand(0, 100);
         }
- 
+
         return new Response(
             json_encode($data),
             200,
             array('Content-Type' => 'application/json')
         );
-    }  
-    
+    }
+
 
     public function raspunsHtmlMvcAction()
     {
         $number = rand(0, 100);
- 
+
         $res = $this->render(
             'Default/raspunsHtml.html.twig',
             array('number' => $number)
         );
-        
+
         return $res;
-    }      
-    
+    }
+
 
     public function flashMsgExAction($numar)
     {
@@ -72,15 +72,15 @@ class DefaultController extends Controller
         for ($i = 1; $i <= $numar; $i++) {
             $data['numar_generat'.$i] = rand(0, 100);
         }
- 
+
         $this->addFlash(
             'notice',
             'Sunt afisat numai in raspunul acesta!'
         );
-        
+
         return $this->render(
             'Default/flashEx.html.twig',
             array('res' => $data)
         );
-    }      
+    }
 }
