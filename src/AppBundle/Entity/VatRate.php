@@ -7,13 +7,13 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * VarRate
+ * VatRate
  *
- * @ORM\Table(name="var_rate")
+ * @ORM\Table(name="vat_rate")
  * @ORM\Entity
  *
  */
-class VarRate
+class VatRate
 {
     /**
      * @var integer
@@ -81,7 +81,7 @@ class VarRate
      *
      * @param string $cod
      *
-     * @return VarRate
+     * @return VatRate
      */
     public function setCod($cod)
     {
@@ -105,7 +105,7 @@ class VarRate
      *
      * @param string $description
      *
-     * @return VarRate
+     * @return VatRate
      */
     public function setDescription($description)
     {
@@ -129,7 +129,7 @@ class VarRate
      *
      * @param float $rate
      *
-     * @return VarRate
+     * @return VatRate
      */
     public function setRate($rate)
     {
@@ -153,7 +153,7 @@ class VarRate
      *
      * @param \DateTime $datUpd
      *
-     * @return VarRate
+     * @return VatRate
      */
     public function setDatUpd($datUpd)
     {
@@ -177,7 +177,7 @@ class VarRate
      *
      * @param \DateTime $datCre
      *
-     * @return VarRate
+     * @return VatRate
      */
     public function setDatCre($datCre)
     {
