@@ -12,7 +12,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Table(name="partner")
  * @ORM\Entity
  * @UniqueEntity("name")
- * @ORM\HasLifecycleCallBacks()
+ * @ORM\HasLifecycleCallbacks()
  *
  */
 class Partner
